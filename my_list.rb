@@ -11,7 +11,7 @@ class MyList
   end
 
   def each(&block)
-    @list.each(&block)
+    puts @list.each(&block)
   end
 end
 

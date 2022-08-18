@@ -1,6 +1,6 @@
 module MyEnumerable
   def all?
-    each {|i| yield(i)}
+   puts each { |i| yield(i) } ? true : false
   end
 
   def any?
