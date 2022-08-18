@@ -1,11 +1,13 @@
 module MyEnumerable
-    def all?
-        
+    def self.all?
+        puts 'hello'
     end
-    def any?
+
+    def self.any?
 
     end
-    def filter?
+
+    def self.filter?
         
     end
 end
