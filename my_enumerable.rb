@@ -1,6 +1,7 @@
 module MyEnumerable
-    def self.all?
-        puts 'hello'
+    def all?
+    #    puts "hello #{list}"
+    true if list.each {|item| }
     end
 
     def self.any?

@@ -5,17 +5,21 @@ require  'my_enumerable'
 
 class MyList
     include MyEnumerable
+    attr_accessor :list
 
     def initialize(*list)
-    @list = list
+      @list = list
     end
 
-    def create_list
-        array = []
-        @list.each { |member| array.push(member) }
+    def each
+      @list
     end
+
 end
 
 list = MyList.new(1, 2, 3, 4)
 
-print list.create_list
+#print list.create_list
+print list.all?
+print list.all? {|e| e < 5} #true
+print list.all? {|e| e > 5} #false
