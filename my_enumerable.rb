@@ -1,14 +1,14 @@
 module MyEnumerable
-    def all?
-    #    puts "hello #{list}"
-    true if list.each {|item| }
-    end
+  def all?
+    each {|i| yield(i)}
+  end
 
-    def self.any?
+  def any?
 
-    end
+  end
 
-    def self.filter?
-        
-    end
+  def filter?
+
+  end
+
 end
