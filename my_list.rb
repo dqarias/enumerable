@@ -7,16 +7,22 @@ class MyList
   include MyEnumerable
 
   def initialize(*list)
-    @list = *list
+    @list = list
   end
 
   def each(&block)
-    puts @list.each(&block)
+    @list.each(&block)
   end
 end
 
 list = MyList.new(1, 2, 3, 4)
 
-# puts list.each
-# print list.all?
-list.all? { |e| e < 5 } # true
+# Test #all?
+list.all? {|e| e < 5} # true
+list.all? {|e| e > 5} # false
+list.all? #false
+
+# Test #any?
+list.any? {|e| e == 2} # true
+list.any? {|e| e == 5} # false
+list.any? # true
